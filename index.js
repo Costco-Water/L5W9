@@ -5,7 +5,7 @@ const methodOverride = require("method-override");
 const session = require("express-session");
 const bcrypt = require("bcryptjs");
 const MongoStore = require("connect-mongo");
-const User = require("./models/User");
+const User = require("./models/Users.js");
 
 const app = express();
 
@@ -78,4 +78,4 @@ app.get("/students", isAuthenticated, (req, res) => {
     res.send("Students Page - Protected");
 });
 
-app.listen(10333, () => console.log("Server is running on port 3000"));
+app.listen(8080, () => console.log("Server is running on port 3000"));
